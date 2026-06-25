@@ -1,8 +1,7 @@
 // Sector.Quadrant+Cyclic Tests.swift
 
-import Testing
-
 import Sector_Cyclic_Primitives
+import Testing
 
 @Suite
 struct `Sector.Quadrant Cyclic projection` {

@@ -1,0 +1,10 @@
+# .github/metadata.yaml
+description: "Cyclic-group projection of quadrants for Swift — bridges Sector Quadrants to the cyclic group of order four."
+topics:
+  - primitives
+  - sector
+  - cyclic
+  - geometry
+homepage: "https://swift-institute.org"
+readme:
+  family: E

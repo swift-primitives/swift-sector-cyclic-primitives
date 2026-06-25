@@ -1,9 +1,9 @@
 // Sector.Quadrant+Cyclic.swift
 // Lossless projection between Sector.Quadrant and the cyclic group Z/4Z.
 
-public import Sector_Primitives
 public import Cyclic_Primitives
 public import Ordinal_Primitives
+public import Sector_Primitives
 
 extension Sector.Quadrant {
     /// This quadrant as an element of `Cyclic.Group.Static<4>` (Z/4Z), in standard math
@@ -17,8 +17,8 @@ extension Sector.Quadrant {
             case .III: 2
             case .IV: 3
             }
-        // rank is always in 0..<4, so construction never fails.
-        return try! Cyclic.Group.Static<4>.Element(Ordinal(rank))
+        // rank is always in 0..<4, so wrapping reduction leaves the value unchanged.
+        return Cyclic.Group.Static<4>.Element(wrapping: Ordinal(rank))
     }
 
     /// The plane quadrant corresponding to a Z/4Z element.
