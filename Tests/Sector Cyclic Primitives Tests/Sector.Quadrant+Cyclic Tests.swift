@@ -3,8 +3,15 @@
 import Sector_Cyclic_Primitives
 import Testing
 
-@Suite
-struct `Sector.Quadrant Cyclic projection` {
+extension Sector.Quadrant {
+    @Suite struct `Cyclic Test` {
+        @Suite struct Unit {}
+        @Suite struct `Edge Case` {}
+        @Suite struct Integration {}
+    }
+}
+
+extension Sector.Quadrant.`Cyclic Test`.Unit {
     @Test
     func `projection round-trips`() {
         for quadrant in Sector.Quadrant.allCases {
